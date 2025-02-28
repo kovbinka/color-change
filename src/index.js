@@ -1,5 +1,6 @@
 const colorRandom = document.getElementById('color');
 const btn = document.getElementById('btn');
+const equalSound = document.getElementById('equal-fx');
 
 const hexDigit = [
   '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
@@ -15,6 +16,8 @@ let colorHandler = () => {
 
   colorRandom.innerText = hex;
   document.body.style.backgroundColor = hex;
+  equalSound.volume = 0.43;
+  equalSound.play();
 }
 
 btn.addEventListener('click', colorHandler);
